@@ -4,8 +4,8 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+//app.use(express.logger());
 app.use(express.static(path.join(__dirname, 'htdocs')));
-//app.use(express.static('htdocs'));
 
 io.on('connection', function(socket){
   socket.on('send_message', function(text){
@@ -13,5 +13,11 @@ io.on('connection', function(socket){
   });
 });
 
-http.listen(3000);
-console.log('Server started: http://localhost:3000/');
+app.get('/', function(request, response) {
+  response.send('Hello World webJS!');
+});
+
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
