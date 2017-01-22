@@ -11,11 +11,11 @@ app.get('/', function(request, response) {
   response.send('Hello World webJS!');
 });
 
-/* io.on('connection', function(socket){
+io.on('connection', function(socket){
   socket.on('send_message', function(text){
 	io.sockets.emit('receive_message',text);
   });
-}); */
+}); 
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
