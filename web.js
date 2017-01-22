@@ -7,9 +7,9 @@ var io = require('socket.io')(http);
 //app.use(express.logger());
 app.use(express.static(path.join(__dirname, 'htdocs')));
 
-app.get('/', function(request, response) {
+/* app.get('/', function(request, response) {
   response.send('Hello World webJS!');
-});
+}); */
 
 io.on('connection', function(socket){
   socket.on('send_message', function(text){
