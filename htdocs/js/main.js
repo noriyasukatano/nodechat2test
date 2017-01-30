@@ -2,6 +2,7 @@ $.ajax({
   //読み込むファイル
     url: 'http://tequila73.at.webry.info/rss/index.rdf',
     type: "GET",
+    dataType:"xml",
      success: function(data) {
        var rss_url = 'http://tequila73.at.webry.info/rss/index.rdf';
 
