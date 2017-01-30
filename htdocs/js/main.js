@@ -8,7 +8,9 @@ $.ajax({
        $.get(rss_url, function(data) {
             $(data.responseText).find("item").each(function (i) {
               var el = $(this).text();
+              var elHTML.innerHTML = $(data.responseText);
                  console.log(el);
+                 console.log("innerHTML:" + elHTML);
                });
              });
      }
