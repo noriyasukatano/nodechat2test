@@ -93,3 +93,13 @@ p.imgP{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
  }
+
+/*
+*描画
+*/
+
+#mainCanvas{
+  width: 400px;
+  height: 400px;
+  border: 1px #ddd solid;
+}
